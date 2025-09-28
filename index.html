@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas y Verduras Uce - Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Toast/Alert Container -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl sm:text-2xl font-bold text-green-600">
+                        <i class="fas fa-apple-alt mr-2"></i>
+                        Frutas y Verduras Uce
+                    </h1>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="about.html" class="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Conócenos
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                            Supermercados
+                        </a>
+                        <a href="#" class="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                            Inicio de sesión
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-green-500" 
+                            aria-label="Abrir menú de navegación" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                    <a href="about.html" class="block text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium">
+                        Conócenos
+                    </a>
+                    <a href="#" class="block text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-base font-medium">
+                        Supermercados
+                    </a>
+                    <a href="#" class="block bg-green-600 text-white hover:bg-green-700 px-3 py-2 rounded-md text-base font-medium">
+                        Inicio de sesión
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-green-500 to-green-600 text-white">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            <div class="text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                    Frutas y Verduras Frescas
+                </h1>
+                <h2 class="text-lg sm:text-xl md:text-2xl mb-8 text-green-100">
+                    Entrega a domicilio en tu área
+                </h2>
+                
+                <!-- Primary Postal Code Section -->
+                <div class="max-w-md mx-auto bg-white rounded-lg p-6 shadow-lg">
+                    <form id="postal-form-hero" class="space-y-4">
+                        <div>
+                            <label for="postal-code-hero" class="block text-sm font-medium text-gray-700 mb-2 text-left">
+                                Código postal
+                            </label>
+                            <input 
+                                type="text" 
+                                id="postal-code-hero" 
+                                name="postalCode"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
+                                aria-describedby="postal-code-hero-help"
+                                required
+                            >
+                            <div id="postal-code-hero-help" class="text-xs text-gray-600 mt-1 text-left">
+                                Ingresa tu código postal para verificar disponibilidad
+                            </div>
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="w-full bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium transition-colors"
+                        >
+                            Buscar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informational Cards -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: 24/7 -->
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Disponible 24/7</h3>
+                    <p class="text-gray-600">
+                        Realiza tus pedidos en cualquier momento del día. Estamos aquí para ti siempre.
+                    </p>
+                </div>
+                
+                <!-- Card 2: Easy to Use -->
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Fácil de usar</h3>
+                    <p class="text-gray-600">
+                        Interfaz intuitiva y sencilla. Haz tus pedidos de forma rápida y sin complicaciones.
+                    </p>
+                </div>
+                
+                <!-- Card 3: Secure Shopping -->
+                <div class="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Compras seguras</h3>
+                    <p class="text-gray-600">
+                        Protegemos tus datos y garantizamos transacciones seguras en cada compra.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary CTA Section -->
+    <section class="py-16 bg-green-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                ¿Listo para comenzar?
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Ingresa tu código postal y descubre los productos frescos disponibles en tu área.
+            </p>
+            
+            <div class="max-w-md mx-auto">
+                <form id="postal-form-cta" class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1">
+                        <label for="postal-code-cta" class="block text-sm font-medium text-gray-700 mb-2 text-left">
+                            Código postal
+                        </label>
+                        <input 
+                            type="text" 
+                            id="postal-code-cta" 
+                            name="postalCode"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            required
+                        >
+                    </div>
+                    <div class="flex-shrink-0 sm:mt-7">
+                        <button 
+                            type="submit" 
+                            class="w-full sm:w-auto bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 font-medium transition-colors"
+                        >
+                            Buscar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1: Cliente -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Cliente</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Cómo comprar</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Mis pedidos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Política de devoluciones</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Trabajador -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Trabajador</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Únete al equipo</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Capacitación</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Beneficios</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Portal empleado</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Proveedor -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Proveedor</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sé nuestro proveedor</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Requisitos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Portal proveedor</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Certificaciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Sociedad -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Sociedad</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">Nuestra historia</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sostenibilidad</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Responsabilidad social</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Noticias</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Media and WhatsApp -->
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <div class="flex space-x-6 mb-4 sm:mb-0">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <span class="text-gray-300 text-sm">¿Necesitas ayuda?</span>
+                    <a href="https://wa.me/1234567890" 
+                       class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full text-white font-medium transition-colors flex items-center space-x-2"
+                       aria-label="Contactar por WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-4 pt-4 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Frutas y Verduras Uce. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
